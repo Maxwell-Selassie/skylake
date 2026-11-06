@@ -97,7 +97,7 @@ The pipeline is organised around the four source entities.
 
 Each source follows an independent ingestion and cleaning path:
 
-<img src="mxs_skylake/images/flow.png" alt="Architecture diagram">
+<img src="mxs_skylake/images/flow.png" alt="Data Flow">
 
 ---
 
@@ -123,7 +123,7 @@ Each source follows an independent ingestion and cleaning path:
 
 The project uses a separation between exploratory notebooks and reusable transformation code.
 
-<img src="mxs_skylake/images/file structure.png" alt="Architecture diagram">
+<img src="mxs_skylake/images/file structure.png" alt="File Structure">
 
 ### Explorations
 
@@ -141,7 +141,7 @@ The project uses a dedicated catalog named `mxs_skylake`, with separate schemas 
 
 The organisation includes:
 
-<img src="mxs_skylake/images/catalog.png" alt="Architecture diagram">
+<img src="mxs_skylake/images/catalog.png" alt="Catalog">
 
 The raw schema contains the source files stored in Unity Catalog Volumes, while the other schemas organise the corresponding Delta tables.
 
