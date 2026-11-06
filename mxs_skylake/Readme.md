@@ -87,7 +87,7 @@ The project follows a Medallion Architecture implemented using Databricks Lakefl
 
 ### High-level data flow
 
-![Architecture diagram](Screenshot 2026-11-06 103654.png)
+<img src="mxs_skylake/images/architecture.png" alt="Architecture diagram">
 
 The transformation graph is managed by Lakeflow Declarative Pipelines, while Unity Catalog provides the organisational and governance layer.
 
@@ -97,48 +97,7 @@ The pipeline is organised around the four source entities.
 
 Each source follows an independent ingestion and cleaning path:
 
-```text
-AIRPORTS
-  |
-  +--> bronze_airports
-           |
-           +--> silver_airports
-                    |
-                    +--> airport_scd1
-                    |
-                    +--> airport_scd2
-
-
-PASSENGERS
-  |
-  +--> bronze_passengers
-           |
-           +--> passengers_silver
-                    |
-                    +--> passengers_scd1
-                    |
-                    +--> passengers_scd2
-
-
-FLIGHTS
-  |
-  +--> bronze_flights
-           |
-           +--> flights_silver
-                    |
-                    +--> flights_scd1
-                    |
-                    +--> flights_scd2
-
-
-BOOKINGS
-  |
-  +--> bronze_bookings
-           |
-           +--> bookings_silver
-```
-
-The resulting Gold entities are then used to construct business-facing materialized views.
+<img src="mxs_skylake/images/flow.png" alt="Architecture diagram">
 
 ---
 
@@ -164,31 +123,7 @@ The resulting Gold entities are then used to construct business-facing materiali
 
 The project uses a separation between exploratory notebooks and reusable transformation code.
 
-```text
-mxs_skylake/
-│
-├── explorations/
-│   ├── bronze
-│   ├── silver
-│   └── gold
-│
-├── transformations/
-│   │
-│   ├── bronze/
-│   │   └── bronze.py
-│   │
-│   ├── silver/
-│   │   ├── silver_airports.py
-│   │   ├── silver_bookings.py
-│   │   ├── silver_flights.py
-│   │   └── silver_passengers.py
-│   │
-│   └── gold/
-│       ├── aggregate.sql
-│       └── gold_scd.py
-│
-└── README.md
-```
+<img src="mxs_skylake/images/file structure.png" alt="Architecture diagram">
 
 ### Explorations
 
@@ -206,23 +141,7 @@ The project uses a dedicated catalog named `mxs_skylake`, with separate schemas 
 
 The organisation includes:
 
-```text
-mxs_skylake
-│
-├── mxs_skylake_raw
-│   └── Volumes
-│       └── mxs_skylake_raw_vol
-│           ├── airports_data
-│           ├── bookings_data
-│           ├── flights_data
-│           └── passengers_data
-│
-├── mxs_skylake_bronze
-│
-├── mxs_skylake_silver
-│
-└── mxs_skylake_gold
-```
+<img src="mxs_skylake/images/catalog.png" alt="Architecture diagram">
 
 The raw schema contains the source files stored in Unity Catalog Volumes, while the other schemas organise the corresponding Delta tables.
 
