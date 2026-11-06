@@ -87,7 +87,7 @@ The project follows a Medallion Architecture implemented using Databricks Lakefl
 
 ### High-level data flow
 
-![Architecture diagram](Screenshot 2026-11-06 103654.png)
+![Architecture diagram]("mxs_skylake/Screenshot 2026-11-06 103654.png")
 
 The transformation graph is managed by Lakeflow Declarative Pipelines, while Unity Catalog provides the organisational and governance layer.
 
