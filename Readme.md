@@ -97,7 +97,7 @@ The pipeline is organised around the four source entities.
 
 Each source follows an independent ingestion and cleaning path:
 
-<img src="mxs_skylake/images/flow.png" alt="Data Flow", width="600">
+<img src="mxs_skylake/images/flow.png" alt="Data Flow" width="600">
 
 ---
 
@@ -123,7 +123,7 @@ Each source follows an independent ingestion and cleaning path:
 
 The project uses a separation between exploratory notebooks and reusable transformation code.
 
-<img src="mxs_skylake/images/file structure.png" alt="File Structure", width="600">
+<img src="mxs_skylake/images/file structure.png" alt="File Structure" width="600">
 
 ### Explorations
 
@@ -141,7 +141,7 @@ The project uses a dedicated catalog named `mxs_skylake`, with separate schemas 
 
 The organisation includes:
 
-<img src="mxs_skylake/images/catalog.png" alt="Catalog, width="600">
+<img src="mxs_skylake/images/catalog.png" alt="Catalog" width="600">
 
 The raw schema contains the source files stored in Unity Catalog Volumes, while the other schemas organise the corresponding Delta tables.
 
@@ -664,7 +664,7 @@ These improvements represent possible extensions of the current platform rather 
 
 The source datasets were obtained from GitHub.
 
-**Original dataset repository:** [Original Dataset Repository](https://github.com/anshlambagit/AnshLambaYoutube/tree/main/Databricks%20End%20To%20End%20Project)]
+**Original dataset repository:** [Original Dataset Repository](https://github.com/anshlambagit/AnshLambaYoutube/tree/main/Databricks%20End%20To%20End%20Project)
 
 **Dataset author:** [Ansh Lamba](https://github.com/anshlambagit/AnshLambaYoutube)
 
